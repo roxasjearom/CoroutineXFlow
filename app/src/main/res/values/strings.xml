@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Coroutine x Flow</string>
+    <string name="simple_coroutine_title">Simple Coroutine</string>
+    <string name="simple_coroutine_description">I\'m just a simple fire-and-forget coroutine.</string>
+    <string name="simple_coroutine_button_label">Fire!</string>
+    <string name="loading_label">Executing…</string>
 </resources>
