@@ -24,6 +24,8 @@ import com.roxasjearom.coroutinexflow.ui.theme.CoroutineXFlowTheme
 @Composable
 fun SimpleCoroutineSection(
     modifier: Modifier = Modifier,
+    title: String,
+    description: String,
     state: SimpleCoroutineState,
     onButtonClick: () -> Unit,
 ) {
@@ -38,14 +40,14 @@ fun SimpleCoroutineSection(
                 .padding(all = 16.dp)
         ) {
             Text(
-                text = stringResource(R.string.simple_coroutine_title),
+                text = title,
                 style = MaterialTheme.typography.titleLarge,
             )
 
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = stringResource(R.string.simple_coroutine_description),
+                text = description,
                 style = MaterialTheme.typography.bodyMedium,
             )
 
@@ -85,6 +87,8 @@ fun SimpleCoroutineSection(
 fun SimpleCoroutineSectionPreview(modifier: Modifier = Modifier) {
     CoroutineXFlowTheme {
         SimpleCoroutineSection(
+            title = stringResource(id = R.string.simple_coroutine_title),
+            description = stringResource(id = R.string.simple_coroutine_description),
             state = SimpleCoroutineState(),
             onButtonClick = {}
         )
